@@ -1,0 +1,80 @@
+const ANIMAL_MAP = {
+	'PATRIOTIC CANADIAN BEAVER': '20161014',
+	'MANDRILL': '20161021',
+	'SPOOKY VAMPIRE BUNNY': '20161028',
+	'HAMSTER': '20161104',
+	'PENGUIN': '20161118',
+	'BEARDED DRAGON': '20161125',
+	'KING COBRA': '20161202',
+	'HAMMERHEAD SHARK': '20161209',
+	'PLATYPUS': '20170106',
+	'HEDGEHOG': '20170113',
+	'SQUIRREL': '20170120',
+	'UNICORN': '20170127',
+	'COW': '20170203',
+	'BISON': '20170210',
+	'LADYBUG': '20170217',
+	'ORANGUTAN': '20170224',
+	'MOOSE': '20170303',
+	'MANATEE': '20170310',
+	'STAR-NOSED MOLE': '20170317',
+	'AXOLOTL': '20170324',
+	'KOALA': '20170331',
+	'SEA HORSE': '20170407',
+	'SLOTH': '20170413',
+	'OWL': '20170421',
+	'STICK BUG': '20170428',
+	'SEA CUCUMBER': '20170505',
+	'KOMONDOR DOG': '20170512',
+};
+
+const DATE_MAP = {
+	'20161014': 'PATRIOTIC CANADIAN BEAVER',
+	'20161021': 'MANDRILL',
+	'20161028': 'SPOOKY VAMPIRE BUNNY',
+	'20161104': 'HAMSTER',
+	'20161118': 'PENGUIN',
+	'20161125': 'BEARDED DRAGON',
+	'20161202': 'KING COBRA',
+	'20161209': 'HAMMERHEAD SHARK',
+	'20170106': 'PLATYPUS',
+	'20170113': 'HEDGEHOG',
+	'20170120': 'SQUIRREL',
+	'20170127': 'UNICORN',
+	'20170203': 'COW',
+	'20170210': 'BISON',
+	'20170217': 'LADYBUG',
+	'20170224': 'ORANGUTAN',
+	'20170303': 'MOOSE',
+	'20170310': 'MANATEE',
+	'20170317': 'STAR-NOSED MOLE',
+	'20170324': 'AXOLOTL',
+	'20170331': 'KOALA',
+	'20170407': 'SEA HORSE',
+	'20170413': 'SLOTH',
+	'20170421': 'OWL',
+	'20170428': 'STICK BUG',
+	'20170505': 'SEA CUCUMBER',
+	'20170512': 'KOMONDOR DOG',
+};
+
+export default {
+	ANIMAL_MAP: ANIMAL_MAP,
+	DATE_MAP: DATE_MAP,
+
+	getAnimalByDate: function(dateCode) {
+		return DATE_MAP[dateCode];
+	},
+
+	getDatecodeByAnimal: function(animalCode) {
+		return ANIMAL_MAP[animalCode];
+	},
+
+	getHumanReadableAnimal: function(animalName) {
+		return !!animalName ? animalName.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();}) : animalName;
+	},
+
+	getApiAnimalName: function(animalCode) {
+		return animalCode.replace(' ', '+');
+	}
+}

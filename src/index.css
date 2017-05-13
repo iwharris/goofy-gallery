@@ -1,0 +1,64 @@
+html {
+  font-family: 'Roboto', sans-serif;
+}
+
+body.gg-body {
+  background-color: #e0e0e0;
+  margin: 0px;
+}
+
+.header-first {
+  padding-left: 8px;
+}
+
+.header-item {
+  padding-right: 16px;
+  font-size: 16px;
+  position: relative;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.header-link {
+  color: rgb(255,255,255);
+  text-decoration: none;
+}
+
+.gg-link {
+  text-decoration: none;
+}
+
+.gg-content {
+  margin: 8px;
+}
+
+.gg-overlay {
+  background: rgba(0, 0, 0, 0.54);
+}
+
+.center-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.center-content img {
+  width: 60%;
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.fillwidth {
+    min-width: 100%;
+    height: auto;
+}
+
+.fillheight {
+    min-height: 100%;
+    width: auto;
+}
+
+.dialog-root {
+  padding-top: 0 !important;
+}
